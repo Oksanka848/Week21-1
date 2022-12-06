@@ -1,6 +1,6 @@
 let button = document.getElementById('click');
 let username = document.getElementById ('name');
-
+let phone = document.getElementById ('phone')
 let midname = document.getElementById ('midname');
 let city = document.getElementById ('city');
 let mail = document.getElementById ('mail');
@@ -14,7 +14,7 @@ button.addEventListener("click", function() {
   })
 
 function checkAll(){
-    let inputs=document.querySelectorAll("input");
+    let inputs=document.querySelectorAll("input[required]");
     for (let input of inputs){
         check(input);
     }
