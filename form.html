@@ -10,17 +10,20 @@
 <body>
     <div class="form">
         <div class="avi"></div>
-        <h1 class="name">Welcome</h1>
+        <h1>Welcome</h1>
       <form>
-        <input type="text" value="Username" onfocus="this.value='';"/>
-        <input type="text" value="Usersername" onfocus="this.value='';"/>
-        <input type="text" value="City" onfocus="this.value='';"/>
-        <input type="text" value="Telefon" onfocus="this.value='';"/>
-        <input type="text" value="Password" onfocus="this.value='';"/>
-        <input type="submit" value="Login" action="submit"/>
+        <input type="text" value="username" onfocus="this.value='' ;" id='name' required//>
+        <input type="text" value="usermidname" onfocus="this.value='';" id='midname' required//>
+        <input type="date" value="bfday" onfocus="this.value='';" id='bfday' required//>
+        <input type="text" value="city" onfocus="this.value='';" id='city' required//>
+        <input type="email" value="mail" onfocus="this.value='';" id='mail' required//>
+        <input type="text" value="telefon" onfocus="this.value='';" id='telefon' required//>
+        <input type="password" value="password" onfocus="this.value='';" id='password' required/>
+        <input type="text" value="login" onfocus="this.value='';" id='login' required//>
+        <input type="submit" value="click" action="submit" id='click' />
       </form>
     </div><!--form-->
-    <div class="recovery">Forgot your password? <a href="#">Click here</a></div>
+    <div class="recovery">Забыли Ваш пароль? <a href="#">Не расстраивайтесь</a></div>
 
     <script src="/form.js"></script>
 </body>

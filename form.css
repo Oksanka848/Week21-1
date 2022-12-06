@@ -33,11 +33,11 @@
   .avi{
     background:url(/logo.png);
     background-repeat:no-repeat;
-    width: 62px;
-    height: 62px;
+    width: 64px;
+    height: 64px;
     margin-left:auto;
     margin-right:auto;
-    margin-bottom:22px;
+    margin-bottom:8px;
   }
   .avi:hover{
     -webkit-filter: brightness(102%);
@@ -45,8 +45,8 @@
     bottom:2px;
   }
   .form{
-    width:250px;
-    height:400px;
+    width:280px;
+    height:620px;
     background:#fdfdfd;
   padding:25px;
   margin-left:auto;
@@ -68,10 +68,10 @@
     margin-right:auto;
     text-align:center;
   }
-  input[type=text]{
-    width:175px;
-    height:27px;
-    margin-top:13px;
+  input{
+    width:180px;
+    height:30px;
+    margin-top:22px;
     padding-left:8px;
     color:#bcbcbc;
     background: #efefef; /* Old browsers */
@@ -90,7 +90,7 @@
   border-left:none;
   border-right:none;
   }
-  input[type=text]:focus{
+  input:focus{
     outline:none;
   }
   input[type=submit]{
@@ -153,17 +153,20 @@
   .form:before{
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     margin-left:50%;
-    width: 300px;
-    top:5px;
-    left:-145px;
-    transform: rotate(98deg);
+    height:280px;
+    width:620px;
+    top:150px;
+    left: -295px;
+        transform: rotate(98deg);
     -webkit-transform:rotate(88deg);
   }
   .form:after{
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     margin-right:50%;
-    top:5px;
-    right:-145px;
-    transform: rotate(95deg);
-    -webkit-transform:rotate(95deg);;
+    top:150px;
+    right:-275px;
+    transform: rotate(195deg);
+    -webkit-transform:rotate(95deg);
+    height:280px;
+    width:620px;
   }
