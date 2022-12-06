@@ -6,6 +6,7 @@ let city = document.getElementById ('city');
 let mail = document.getElementById ('mail');
 let bfday = document.getElementById ('bfday');
 let login = document.getElementById ('login');
+let pass = document.getElementById ('password');
 button.addEventListener("click", function() {
     checkAll();
     ValidateEmail(mail);
@@ -39,6 +40,10 @@ document.getElementById ('error').innerHTML+= "Ваша дата рождени�
 if (login.value  == '') {
     document.getElementById ('error').innerHTML+= "Ваш логин?<br>";
     } 
+    if (pass.value  == '') {
+        document.getElementById ('error').innerHTML+= "Не помните пароль?<br>";
+        } 
+
 }
 }
 
