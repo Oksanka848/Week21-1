@@ -31,7 +31,7 @@
         overflow: hidden;
 }
   .avi{
-    background:url(http://josh-ruther4d.com/wp-content/uploads/2013/04/login.png);
+    background:url(/logo.png);
     background-repeat:no-repeat;
     width: 62px;
     height: 62px;
@@ -46,7 +46,7 @@
   }
   .form{
     width:250px;
-    height:350px;
+    height:400px;
     background:#fdfdfd;
   padding:25px;
   margin-left:auto;
@@ -153,6 +153,7 @@
   .form:before{
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     margin-left:50%;
+    width: 300px;
     top:5px;
     left:-145px;
     transform: rotate(98deg);
