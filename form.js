@@ -1,4 +1,4 @@
-let button = document.getElementById('click');
+//let button = document.getElementById('click');
 let username = document.getElementById ('name');
 let phone = document.getElementById ('phone')
 let midname = document.getElementById ('midname');
