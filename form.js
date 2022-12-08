@@ -20,31 +20,31 @@ function checkAll(){
     }
 
 function check () {
-document.getElementById ('error').innerHTML="";
+//document.getElementById ('error').innerHTML="";
 if (username.value == '') {
-document.getElementById ('error')
-.innerHTML+= "Ваше имя ?<br>";
+    return true;
 }
 if (city.value == '') {
-document.getElementById ('error').innerHTML+= "Город?<br>";
+    return true;
 }
 if (midname == '') {
-document.getElementById ('error').innerHTML+= "Фамилия?<br>";
+    return true;
 }  
 if (mail.value == '') {
-    document.getElementById ('error').innerHTML+= "Ваша почта?<br>";
+    return true;
 }        
 if (bfday.value  == '') {
-document.getElementById ('error').innerHTML+= "Ваша дата рождения?<br>";
+    return true;
 } 
 if (login.value  == '') {
-    document.getElementById ('error').innerHTML+= "Ваш логин?<br>";
+    return true;
     } 
     if (pass.value  == '') {
-        document.getElementById ('error').innerHTML+= "Не помните пароль?<br>";
+        return true;
         } 
         
 }
+return false;
 }
 
 function ValidateEmail(mail) {
@@ -53,8 +53,7 @@ function ValidateEmail(mail) {
         return true;
     }
     else {
-        document.getElementById ('error')
-.innerHTML+= "Неверный формат<br>";
+        
         return false;
     }
 }
@@ -66,8 +65,7 @@ if (bfday.value.match(date_regex)) {
     return true;
 }
 else {
-    document.getElementById ('error')
-.innerHTML+= "Неверный формат<br>";
+    ;
     return false;
 }
 }
