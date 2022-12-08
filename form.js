@@ -6,7 +6,7 @@ let city = document.getElementById ('city');
 let mail = document.getElementById ('mail');
 let bfday = document.getElementById ('bfday');
 let login = document.getElementById ('login');
-let pass = document.getElementById ('password');
+let pass = document.getElementById ('pass');
 button.addEventListener("click", function() {
     checkAll();
     ValidateEmail(mail);
@@ -43,7 +43,7 @@ if (login.value  == '') {
     if (pass.value  == '') {
         document.getElementById ('error').innerHTML+= "Не помните пароль?<br>";
         } 
-
+        
 }
 }
 
@@ -53,7 +53,8 @@ function ValidateEmail(mail) {
         return true;
     }
     else {
-        alert("Ваш адрес электронной почты введен неверно!");
+        document.getElementById ('error')
+.innerHTML+= "Неверный формат<br>";
         return false;
     }
 }
@@ -65,7 +66,8 @@ if (bfday.value.match(date_regex)) {
     return true;
 }
 else {
-    alert("Неправильный формат даты!");
+    document.getElementById ('error')
+.innerHTML+= "Неверный формат<br>";
     return false;
 }
 }

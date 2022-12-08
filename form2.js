@@ -2,7 +2,7 @@
 let button = document.getElementById('click');
 let inputReq = document.querySelectorAll('input[required]');
 inputReq.onfocus = function() {
-    if(this.value== ""){this.value=''}; return false;
+    if(this.value== ''){this.value=''}; return false;
 }
 button.addEventListener("click", function(event) {
    
