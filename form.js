@@ -20,7 +20,7 @@ function checkAll(){
     }
 
 function check () {
-document.getElementById ('error').innerHTML=" ";
+document.getElementById ('error').innerHTML="";
 if (username.value == '') {
 document.getElementById ('error')
 .innerHTML+= "Ваше имя ?<br>";
