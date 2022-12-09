@@ -1,4 +1,4 @@
-//let button = document.getElementById('click');
+let form = document.querySelector('.form');
 let username = document.getElementById ('name');
 let phone = document.getElementById ('phone')
 let midname = document.getElementById ('midname');
@@ -18,7 +18,9 @@ function checkAll(){
     for (let input of inputs){
         check(input);
     }
-
+ if (inputs.values!= ''){
+    e.preventDefault();
+ }
 function check () {
 //document.getElementById ('error').innerHTML="";
 if (username.value == '') {
@@ -43,9 +45,43 @@ if (login.value  == '') {
         return true;
         } 
         
+} 
+
 }
-return false;
-}
+CustomValidation.prototype.getInvaliditiesForHTML = function() {
+    return this.invalidities.join('. <br>');
+  }
+  
+  // Добавляем обработчик клика на кнопку отправки формы
+  form.onsubmit = function(e) {
+    // Пройдёмся по всем полям
+    let inputs=document.querySelectorAll("input[required]");
+    for (var i = 0; i < inputs.length; i++) {
+  
+      var input = inputs[i];
+  
+      // Проверим валидность поля, используя встроенную в JavaScript функцию checkValidity()
+      if (input.checkValidity() == false) {
+  
+        var inputCustomValidation = new CustomValidation(); // Создадим объект CustomValidation
+        inputCustomValidation.checkValidity(input); // Выявим ошибки
+        var customValidityMessage = inputCustomValidation.getInvalidities(); // Получим все сообщения об ошибках
+        input.setCustomValidity(customValidityMessage); // Установим специальное сообщение об ошибке
+  
+        // Добавим ошибки в документ
+        var customValidityMessageForHTML = inputCustomValidation.getInvaliditiesForHTML();
+        input.insertAdjacentHTML('afterend', '<p class="error-message">' + customValidityMessageForHTML + '</p>')
+        stopSubmit = true;
+  
+      } // закончился if
+    } // закончился цикл
+  
+    if (stopSubmit) {
+      e.preventDefault();
+    }
+  }
+
+
 
 function ValidateEmail(mail) {
     let mailFormat = "[a-z0-9._%+-]+@[ a-z0-9.-]+.[a-z]{2,}$";

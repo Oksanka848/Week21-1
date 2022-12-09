@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Montez", sans-serif;
-  src: url("Montez-Regular.ttf");
+  src:  ("Montez-Regular.ttf");
 }
 body {
   background: #e3e3e3;
@@ -9,6 +9,8 @@ body {
   font-size: 14px;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.8);
 }
+
+
 a {
   text-decoration: none;
   color: #757373;
@@ -61,6 +63,9 @@ form {
   width: 175px;
   margin-left: auto;
   margin-right: auto;
+}
+.error{
+  color: #f19a9a;
 }
 .recovery {
   width: 80%;
