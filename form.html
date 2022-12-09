@@ -13,14 +13,14 @@
         <div class="avi"></div>
         <h1>Welcome</h1>
       <form>
-        <input type="text" placeholder='Имя'  id='name' required/>
-        <input type="text" placeholder='Фамилия' id='midname' required/>
+        <input type="text" placeholder='Имя' pattern="[A-Za-zА-Яа-яЁё]" title = "Неверный формат" id='name' required/>
+        <input type="text" placeholder='Фамилия' pattern="[A-Za-zА-Яа-яЁё]" title = "Неверный формат" id='midname' required/>
         <input type="date" placeholder="Дата рождения"  id='bfday' required/>
         <input type="text" placeholder="Город"  id='city' required/>
-        <input type="email" placeholder="Почта"  id='mail' required/>
-        <input type="text" placeholder="Телефон" id='phone' required/>
-        <input type="password" placeholder="Пароль"  id='pass' required/>
-        <input type="text" placeholder="Логин"  id='login' required/>
+        <input type="email" placeholder="Почта"  id='mail' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title = "Неверный формат" required/>
+        <input type="text" placeholder="+7-xxx-xxx-xx-xx" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" title = "Неверный формат" id='phone' required/>
+        <input type="password" placeholder="Пароль"  id='pass' pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title = "Пароль не может быть короче шести символов и должен содержать хотя бы одну цифру, одну маленькую и одну большую латинскую букву." required/>
+        <input type="text" placeholder="Логин" id='login' pattern = "[A-Za-z0-9]{6,}" title = "Логин не может быть короче шести латинских символов." required/>
         <input type="submit" value="click" action="submit" id='click' />
       </form>
 
