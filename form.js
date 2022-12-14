@@ -87,6 +87,8 @@ function sentIt() {
      let e = window.event;
    
         e.preventDefault();
+       
+
         let user = {
             username: document.getElementById ('name').value,
             midname: document.getElementById ('midname').value,
