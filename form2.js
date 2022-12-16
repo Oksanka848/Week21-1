@@ -1,10 +1,5 @@
 
-document.getElementById('click').addEventListener("click", 
-function() {
-    if (checkAll() && ValidateEmail() && checkDate()) {
-        return false;}
-    sentIt()
-  });
+
   function checkAll () {
     myForm = document.forms["myForm"];
     let username = myForm["username"].value;
@@ -16,9 +11,10 @@ function() {
     let pass = myForm["pass"].value;
     let login = myForm["login"].value;
 
-//document.getElementById ('error').innerHTML="";
+
 if (username== '') {
     myForm["username"].focus();
+    
     return false;
 }
 if (midname== '') {
@@ -69,6 +65,15 @@ if (login== '') {
    
     }
 
+    let button = document.getElementById('click');
+button.addEventListener("click", function() {
+    if (checkAll() && ValidateEmail() && checkDate()) {
+        sentIt()
+    }
+    
+   
+  });
+
 function sentIt() {
     let e = window.event;
   
@@ -86,7 +91,7 @@ function sentIt() {
            pass: document.getElementById ('pass').value
        }
        console.log(user);
-       if (checkAll() && ValidateEmail() && checkDate()) {
+       
        fetch('https://httpbin.org/post',{
            method: 'POST',
            body: JSON.stringify(user),
@@ -100,5 +105,6 @@ function sentIt() {
        })
    .catch(error => console.log(error));
    
-       }
+       
+       
     }

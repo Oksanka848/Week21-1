@@ -4,7 +4,7 @@ button.addEventListener("click", function() {
     checkAll()
     ValidateEmail()
     checkDate()
-    sentIt()
+    //*sentIt()*/
   });
 
 
