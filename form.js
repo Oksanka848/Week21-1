@@ -52,9 +52,7 @@ if (login== '') {
     myForm["login"].focus();
     return false;
     } 
-        else {
-        return true;    
-    } 
+    return true;
 } 
 
 
@@ -99,7 +97,7 @@ function sentIt() {
             login: document.getElementById ('login').value,
             pass: document.getElementById ('pass').value
         }
-        console.log(user);
+        
         fetch('https://httpbin.org/post',{
             method: 'POST',
             body: JSON.stringify(user),
