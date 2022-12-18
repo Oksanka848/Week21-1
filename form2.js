@@ -1,5 +1,13 @@
 
 
+      let button = document.getElementById('click');
+button.addEventListener("click", function() {
+    if (checkAll() && ValidateEmail() && checkDate()) {
+        sentIt()
+    }
+    
+   
+  });
   function checkAll () {
     myForm = document.forms["myForm"];
     let username = myForm["username"].value;
@@ -64,16 +72,7 @@ if (login== '') {
     }
    
     }
-
-    let button = document.getElementById('click');
-button.addEventListener("click", function() {
-    if (checkAll() && ValidateEmail() && checkDate()) {
-        sentIt()
-    }
     
-   
-  });
-
 function sentIt() {
     let e = window.event;
   
