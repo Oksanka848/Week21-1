@@ -1,5 +1,5 @@
 document.getElementById("click").addEventListener("click", function () {
-  sentIt();
+  sentIt()
 });
 
 function checkAll() {
@@ -70,19 +70,19 @@ function sentIt() {
   let e = window.event;
 
   e.preventDefault();
-
+  let user = {
+    username: document.getElementById("name").value,
+    midname: document.getElementById("midname").value,
+    phone: document.getElementById("phone").value,
+    city: document.getElementById("city").value,
+    mail: document.getElementById("mail").value,
+    bfday: document.getElementById("bfday").value,
+    login: document.getElementById("login").value,
+    pass: document.getElementById("pass").value,
+  }
+console.log(user);
   if (checkAll() && ValidateEmail() && checkDate()) {
-    let user = {
-      username: document.getElementById("name").value,
-      midname: document.getElementById("midname").value,
-      phone: document.getElementById("phone").value,
-      city: document.getElementById("city").value,
-      mail: document.getElementById("mail").value,
-      bfday: document.getElementById("bfday").value,
-      login: document.getElementById("login").value,
-      pass: document.getElementById("pass").value,
-    };
-
+    
     fetch("https://httpbin.org/post", {
       method: "POST",
       type: "POST",
